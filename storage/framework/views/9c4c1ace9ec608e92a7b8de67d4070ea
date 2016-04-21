@@ -1,0 +1,35 @@
+<?php $__env->startSection('title'); ?>
+    클립보드
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('header_css_js'); ?>
+	<link href="/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="/css/h_type1.css" rel="stylesheet" type="text/css" />
+    <link href="/css/thumb_list.css" rel="stylesheet" type="text/css" />
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+    <script src="/js/thumb_grid.js"></script>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('header'); ?>
+	<?php echo $__env->make('layouts.header.header_type1', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('layouts.header.menu_slide', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('layouts.header.menu_search', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('container'); ?>
+	<div class="thumb_listwrap">
+		<div class="thumb_grid">
+			<?php echo $__env->make('products.thumb', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		</div>
+	</div>
+	<?php echo $__env->make('assets.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('footer_js'); ?>
+	<script src="/js/common_menu.js"></script>
+    <script src="/js/menuup.js"></script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

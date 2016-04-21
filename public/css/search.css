@@ -1,0 +1,45 @@
+body {
+    background: url(/image/login_bg.png) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.hash_listwrap {
+    max-width: 560px;
+    margin: 80px auto 50px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hash_list li {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    padding: 5px 20px;
+}
+
+.hash_list li > a > strong {
+    color: #c9c9c9;
+    display: block;
+}
+
+.hash_list li > a > p {
+    color: black;
+}
+
+.hash_list {
+    background: white;
+}
+
+@media screen and (max-width: 560px) {
+    .hash_listwrap {
+        margin: 0 auto;
+        margin-top: 50px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+}
+.spacer {
+    height: 50px;
+}

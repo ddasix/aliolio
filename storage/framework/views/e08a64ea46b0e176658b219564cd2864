@@ -1,0 +1,35 @@
+<?php $__env->startSection('title'); ?>
+    피드백
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('header_css_js'); ?>
+	<link href="../css/base.css" rel="stylesheet" type="text/css" />
+	<link href="../css/h_type3.css" rel="stylesheet" type="text/css" />
+	<link href="../css/post.css" rel="stylesheet" type="text/css" />
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('header'); ?>
+	<?php echo $__env->make('layouts.header.header_feedback', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('container'); ?>
+<div class="wrap">
+	<div class="pagewrap">
+		<div class="write_info">
+			<textarea name="feedback" id="post_input" maxlength="1000" placeholder="이곳에 의견을 입력해 주세요. 검토후 적극 반영하겠습니다.
+
+*알리 익스프레스 결제, 환불, 배송 등의 문의는 알리익스프레스 홈페이지 또는 모바일 앱을 통해서 진행해 주세요^^" style="height: 80%;"></textarea>
+		</div>
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('out_footer'); ?>
+    <?php echo $__env->make('assets.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('footer_js'); ?>
+	
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

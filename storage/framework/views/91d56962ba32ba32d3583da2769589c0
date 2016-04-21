@@ -1,0 +1,60 @@
+<?php $__env->startSection('title'); ?>
+    알리오올리오
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('header_css_js'); ?>
+    <?php echo HTML::style('css/base.css', array(), true); ?>
+
+    <!-- <link href="<?php echo e(asset( 'css/base.css', Request::secure() )); ?>" rel="stylesheet"> -->
+    <?php echo HTML::style('css/h_type1.css', array(), true); ?>
+
+    <?php echo HTML::style('css/main.css', array(), true); ?>
+
+    <?php echo HTML::style('css/feed_list.css', array(), true); ?>
+
+    <?php echo HTML::style('css/carousel.css', array(), true); ?>
+
+    <?php echo HTML::style('css/carousel.theme.main.css', array(), true); ?>
+
+    <?php echo HTML::style('css/carousel.transitions.css', array(), true); ?>
+
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+    <?php echo HTML::script('js/grid.js', array(), true); ?>
+
+    <?php echo HTML::script('js/main_slide.js', array(), true); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('header'); ?>
+	<?php echo $__env->make('layouts.header.header_main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('layouts.header.menu_slide', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('layouts.header.menu_search', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('container'); ?>
+	<?php echo $__env->make('assets.main_bn', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <div class="list_wrap">
+            <div class="product_listwrap">
+                <div class="grid">
+                    <?php echo $__env->make('products.feed',['items'=>$items], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                </div>
+                <?php echo $__env->make('assets.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            </div>
+        </div>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('footer_js'); ?>
+    <?php echo HTML::script('js/common_menu.js', array(), true); ?>
+
+    <?php echo HTML::script('js/owl.carousel.min.js', array(), true); ?>
+
+    <?php echo HTML::script('js/main_slide.js', array(), true); ?>
+
+    <?php echo HTML::script('js/menuup.js', array(), true); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,382 @@
+body {
+    background: url(/image/login_bg.png) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.pagewrap {
+    width: 100%;
+    max-width: 680px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+#post_input {
+    width: 100%;
+    min-height: 170px;
+    font-size: 14px;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    box-sizing: border-box;
+    color: #9c9c9c;
+    outline: none;
+    resize: none;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    border-radius: none;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.hash_tool {
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+.hash_btn {
+    float: right;
+    height: 30px;
+    display: inline-block;
+    background-image: url(../image/search_icon_gray.png);
+    background-size: auto 60%;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 2px 5px 2px 15px;
+    line-height: 26px;
+    color: #9c9c9c;
+    border: 1px solid rgba(150, 150, 150, 0.2);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#code_input {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    padding: 10px;
+    padding-right: 90px;
+    box-sizing: border-box;
+    border: none;
+    color: #9c9c9c;
+    outline: none;
+    border-radius: none;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+}
+
+#review_input {
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    padding: 5px;
+    background-color: white;
+    border: none;
+    color: #9c9c9c;
+    border-top: 1px solid #c6c6c6;
+    outline: none;
+    border-radius: none;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.post_wrap {
+    width: 100%;
+    max-width: 560px;
+    position: relative;
+    box-sizing: border-box;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.3);
+    background-color: white;
+}
+
+.page_thumb {
+    width: 30%;
+    padding: 10px;
+    float: left;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.page_thumb > img {
+    width: 100%;
+    border: 1px solid #9c9c9c;
+}
+
+.product_page_info {}
+
+.page_name {
+    max-width: 70%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.page_name > p {
+    font-size: 12px;
+    color: #6c6c6c;
+    padding-bottom: 15px;
+}
+
+.page_name > strong {
+    font-size: 13px;
+    color: red;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.go_guide {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    text-align: center;
+    background-image: url(/image/guide.png);
+    background-size: 100%;
+}
+
+#go_url {
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    border: none;
+    background-color: rgba(103, 177, 215, 1);
+    color: white;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.next_btn_wrap {
+    width: 100%;
+    height: 40px;
+    max-width: 560px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#next_btn {
+    display: inline-block;
+    height: 40px;
+    width: 96%;
+    margin: 0 2%;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(122, 213, 156);
+    color: white;
+}
+
+#post_form {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+}
+
+#post_form fieldset {
+    border: 0 none;
+    box-sizing: border-box;
+    width: 100%;
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+
+/*Hide all except first fieldset*/
+
+#post_form fieldset:not(:first-of-type) {
+    display: none;
+}
+
+
+/*buttons*/
+
+#post_form .action-button {
+    width: 40%;
+    font-weight: bold;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    color: white;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.next {
+    background: rgb(122, 213, 156);
+}
+
+
+/*headings*/
+
+.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/*progressbar*/
+
+#step_status {
+    margin-bottom: 30px;
+    margin-top: 80px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+#step_status li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+#step_status li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 13px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+}
+
+
+/*progressbar connectors*/
+
+#step_status li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+    /*put it behind the numbers*/
+}
+
+#step_status li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+
+/*marking active/completed steps green*/
+
+
+/*The number of the step and the connector before it = green*/
+
+#step_status li.active:before,
+#step_status li.active:after {
+    background: rgb(122, 213, 156);
+    color: white;
+}
+
+@media screen and (max-width: 560px) {
+    .pagewrap {
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+}
+
+#post_btn {
+    display: inline-block;
+    margin-top: 10px;
+    height: 40px;
+    width: 46%;
+    margin: 0 2%;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(122, 213, 156);
+    color: white;
+    float: left;
+}
+
+#cancle_btn {
+    display: inline-block;
+    margin-top: 10px;
+    height: 40px;
+    width: 46%;
+    margin: 0 2%;
+    line-height: 40px;
+    text-align: center;
+    background-color: #9c9c9c;
+    color: #c6c6c6;
+    box-sizing: border-box;
+    float: left;
+    cursor: pointer;
+}
+
+#feedback_input {
+    width: 100%;
+    min-height: 300px;
+    font-size: 14px;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    box-sizing: border-box;
+    color: #9c9c9c;
+    outline: none;
+    resize: none;
+    border-radius: none;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+}
+
+#send_btn {
+    display: inline-block;
+    height: 40px;
+    width: 46%;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(122, 213, 156);
+    color: white;
+}
+
+.submit {
+    background: rgb(122, 213, 156);
+}
+
+.previous {
+    background: #6c6c6c;
+}

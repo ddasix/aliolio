@@ -1,0 +1,97 @@
+.logo_area {
+    height: 50px;
+    width: 250px;
+    background-color: white;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(150,150,150,0.2);
+}
+
+.logo_area p {
+    line-height: 50px;
+    font-size: 14px;
+    color: black;
+    float: left;
+    padding-left: 5px;
+}
+
+.logo_area img{
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+.menu_icon {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-image: url(../image/menu_icon_gray.png);
+    background-size: 80%;
+    background-position: center;
+    z-index: 8;
+    cursor: pointer;
+}
+
+#cover_menu {
+    width: 0px; 
+    height: 100%; 
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    background-color: white;
+        transition: All 0.2s ease; 
+  -webkit-transition: All 0.2s ease; 
+  -moz-transition: All 0.2s ease; 
+  -o-transition: All 0.2s ease; 
+}
+
+#cover_menu.opened{
+    width: 250px;
+    left: 0px;
+    box-shadow: 5px 5px 15px 1.5px rgba(0, 0, 0, 0.2);
+}
+
+.menu_wrap {
+    width: 250px;
+}
+
+.menu_wrap > a.logout{
+    display: none;
+}
+
+.menu_wrap > li.logout{
+    display: none;
+}
+
+.menu_wrap > a {
+    display: block;
+    padding: 10px 0 10px 10%;
+    box-sizing: border-box;
+    color: black;
+    font-size: 14px
+}
+
+.snd_menu > a {
+    display: block;
+    padding: 10px 0 10px 10%;
+    box-sizing: border-box;
+    color: gray;
+    font-size: 12px;
+}
+
+.menu_wrap > a:hover {
+    background-color: rgb(122,213,156);
+}
+
+.menu_wrap > li {
+    display: block;
+    width: 90%;
+    border-top: 1px solid rgba(150,150,150,0.2);
+    box-sizing: border-box;
+    margin: 10px auto;
+}

@@ -1,0 +1,31 @@
+<?php $__env->startSection('title'); ?>
+    이용가이드
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('header_css_js'); ?>
+	<link href="../css/base.css" rel="stylesheet" type="text/css" />
+	<link href="../css/h_type3.css" rel="stylesheet" type="text/css" />
+	<link href="../css/guide.css" rel="stylesheet" type="text/css" />
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('header'); ?>
+	<?php echo $__env->make('layouts.header.header_type3', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('container'); ?>
+<div class="wrap">
+	<div class="page_wrap">
+		<?php echo $__env->make('assets.guide.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('out_footer'); ?>
+    <?php echo $__env->make('assets.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('footer_js'); ?>
+	
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
