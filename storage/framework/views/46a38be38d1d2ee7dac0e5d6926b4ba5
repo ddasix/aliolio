@@ -1,5 +1,0 @@
-<div id="detail_img_carosel" class="owl-carousel">
-	<?php foreach($images as $image): ?>
-	<div><img src="<?php echo e($image); ?>"></div>
-	<?php endforeach; ?>
-</div>

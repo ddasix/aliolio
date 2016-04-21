@@ -1,0 +1,182 @@
+.profile_bg {
+    width: 100%;
+    height: 230px;
+    background-color: white;
+    position: relative;
+}
+
+.profile_list_wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-transition: width 0.1s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.1s;
+}
+
+.profile_listwrap_thumb{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    background-color: #fafafa;
+    height: 0px;
+    overflow: visible;
+}
+
+.profile_listwrap_thumb.hide{
+    height: 0px;
+    overflow: hidden;
+}
+
+.profile_listwrap_feed{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    background-color: #fafafa;
+    height: 0px;
+    overflow: visible;
+}
+
+.profile_listwrap_feed.hide{
+    height: 0px;
+    overflow: hidden;
+}
+
+.myprofile_wrap {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 30px;
+    text-align: center;
+}
+
+.myprofile_wrap img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(150,150,150,0.2)
+}
+
+.myprofile_wrap > p{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.myprofile_wrap > a{
+    padding: 0 5px;
+    text-align: center;
+    color: gray;
+    font-size: 11px;
+}
+
+.myprofile_wrap > a strong{
+    font-weight: bold;
+    font-size: 11px;
+    padding-left: 3px;
+}
+
+.post_btn_wrap {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 120px;
+}
+
+.post_btn {
+    width: 80px;
+    height: 25px;
+    display: block;
+    margin: 0 auto;
+    line-height: 25px;
+    border-radius: 5px;
+    border: 1px solid rgba(103,177,215,1);
+    color: rgba(103,177,215,1);
+}
+
+.profile_listview_wrap{
+    width: 100%;
+    border-top: 1px solid rgba(150,150,150,0.2);
+    border-bottom: 1px solid rgba(150,150,150,0.2);
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+}
+
+.profile_listview {
+    max-width: 560px;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+}
+
+#listview_thumb {
+    width: 50%;
+    float: left;
+    height: 40px;
+    border-right: 1px solid rgba(150,150,150,0.2);
+    border-left: 1px solid rgba(150,150,150,0.2);
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 40px;
+    color: #9c9c9c;
+    cursor: pointer;
+}
+
+#listview_feed {
+    width: 50%;
+    float: left;
+    height: 40px;
+    border-right: 1px solid rgba(150,150,150,0.2);
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 40px;
+    color: #9c9c9c;
+    cursor: pointer;
+}
+
+#listview_thumb.choose {
+    border-bottom: 2px solid rgba(103,177,215,1); 
+    color: rgba(103,177,215,1);
+}
+
+#listview_feed.choose {
+    border-bottom: 2px solid rgba(103,177,215,1); 
+    color: rgba(103,177,215,1);
+}
+
+#back_btn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(../image/back_icon_gray.png);
+    background-size: 50%;
+    background-position: center center;
+    z-index: 8;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#clip_brd_btn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-image: url(../image/clip_icon_gray.png);
+    background-size: 60%;
+    background-position: center center;
+    z-index: 8;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
