@@ -9,9 +9,22 @@ $(".srch_icon").click(function () {
 });
 
 $(".detail_trigger").click(function () {
-    $("#detail_layer,html").addClass("detail_open");
-    window.location.hash = "#open";
+    var pcode = $(this).attr('data-pcode');
+    var info = $(this).attr('data-info');
+    loadingProductInfo(info, pcode, function(){
+        $("#detail_layer,html").addClass("detail_open");
+        window.location.hash = "#open";
+    });
 });
+
+function loadingProductInfo(info, pcode, cb){
+    $.getJSON("/product/info/"+pcode, function(xhr){
+        console.log(JSON.parse(info));
+        if(typeof cb == 'function'){
+            cb(true);
+        }
+    });
+}
 
 window.onhashchange = function () {
     if (location.hash != "#menu_open") {

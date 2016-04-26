@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/',
+    [
+        'uses' => 'ProductsController@index'
+    ]
+);
+Route::get('/product/info/{pcode}',
+    [
+        'uses' => 'ProductsController@productInfo'
+    ]
+);

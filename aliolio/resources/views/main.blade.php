@@ -28,7 +28,7 @@ ALIOLIO - 해외구매 리뷰보고 구매하자!
 	<div class="list_wrap">
 		<div class="product_listwrap">
 			<div class="grid">
-				@include('products.list_feed')
+				@include('products.list_feed',['product_infos'=>$product_info])
 			</div>
 		</div>
 		<div id="footer">
