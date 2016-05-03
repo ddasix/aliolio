@@ -80,11 +80,11 @@
 .owl-prev {
     position: absolute;
     left: 0px;
-    bottom: 0px;
+    top: 50%;
 }
 
 .owl-next {
     position: absolute;
     right: 0px;
-    bottom: 0px;
+    top: 50%;
 }

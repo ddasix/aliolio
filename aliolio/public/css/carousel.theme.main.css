@@ -40,8 +40,8 @@
 }
 .owl-theme .owl-controls .owl-page span{
 	display: block;
-	width: 5px;
-	height: 5px;
+	width: 20px;
+	height: 10px;
 	margin: 5px 7px;
 	filter: Alpha(Opacity=50);/*IE7 fix*/
 	opacity: 0.5;
