@@ -5,6 +5,7 @@ ALIOLIO - 해외구매 리뷰보고 구매하자!
 @stop
 
 @section('header_js')
+	<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<link rel="icon" sizes="192x192" href="/icon.png" />
 	<link href="/css/base.css" rel="stylesheet" type="text/css" />
 	<link href="/css/carousel.css" rel="stylesheet" type="text/css" />
