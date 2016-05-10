@@ -37,7 +37,6 @@ ALIOLIO - 해외구매 리뷰보고 구매하자!
 		</div>
 	</div>
 	<div id="detail_layer">
-		@include('products.layer_detail')
 	</div>
 @stop
 
