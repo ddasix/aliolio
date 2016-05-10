@@ -2,13 +2,13 @@ $(".menu_icon").click(function () {
     $("#cover_menu,#cover_wrap,html").addClass("open");
     window.location.hash = "#menu_open";
 });
-$(".srch_icon").click(function () {
+$(".srch_icon").on("click", function () {
     $("#srch_menu,#cover_wrap,html").addClass("open");
 	$("#search_input").focus();
     window.location.hash = "#menu_open";
 });
 
-$(".detail_trigger").click(function () {
+$(".detail_trigger").on("click", function () {
     var pcode = $(this).attr('data-pcode');
     var info = $(this).attr('data-info');
     loadingProductInfo(info, pcode, function(){
@@ -19,7 +19,7 @@ $(".detail_trigger").click(function () {
 
 function loadingProductInfo(info, pcode, cb){
     $.getJSON("/product/info/"+pcode, function(xhr){
-        console.log(JSON.parse(info));
+        console.log(JSON.parse(xhr));
         if(typeof cb == 'function'){
             cb(true);
         }
