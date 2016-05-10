@@ -26,6 +26,7 @@
                     <a href="/login/agreement.html" class="facebook login_page">페이스북 계정으로 로그인</a>
                     <a class="naver login_page">네이버 계정으로 로그인</a>
                     <a class="kakao login_page">카카오 계정으로 로그인</a>
+					<a class="insta login_page">인스타그램 계정으로 로그인</a>
                 </div>
             </div>
         </div>

@@ -1497,7 +1497,7 @@ td img {
     text-align: center;
     height: 30px;
     display: block;
-    padding-top: 30px;
+    padding-top: 20px;
     font-size: 12px;
 }
 
@@ -1540,18 +1540,18 @@ td img {
 }
 
 .social_login_menu {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .login_page {
-    height: 50px;
+    height: 40px;
     width: 90%;
     display: block;
     margin: 8px auto;
     text-align: center;
     padding-left: 20px;
     box-sizing: border-box;
-    line-height: 50px;
+    line-height: 40px;
     border-radius: 5px;
 }
 
@@ -1839,4 +1839,12 @@ td img {
     content: "";
     clear: both;
     display: table;
+}
+.insta {
+    background-color: rgb(46,94,134);
+    background-image: url(/image/insta_icon.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    font-weight: bold;
+    color: white;
 }
