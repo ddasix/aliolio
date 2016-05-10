@@ -18,7 +18,7 @@ $(".detail_trigger").on("click", function () {
 });
 
 function loadingProductInfo(info, pcode, cb){
-    $.post("/product/info/"+pcode, JSON.parse(info), function(xhr){
+    $.post("/product/info/"+pcode, {_token:$("meta[name='csrf-token']").attr('content'),data:JSON.parse(info)}, function(xhr){
         console.log(xhr);
         if(typeof cb == 'function'){
             cb(true);
