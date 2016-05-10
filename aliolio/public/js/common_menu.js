@@ -18,14 +18,12 @@ $(".detail_trigger").on("click", function () {
 });
 
 function loadingProductInfo(info, pcode, cb){
-    var productinfo = render('productinfo', {});
-    console.log(productinfo);
-    // $.getJSON("/product/info/"+pcode, function(xhr){
-    //     console.log(JSON.parse(xhr));
-    //     if(typeof cb == 'function'){
-    //         cb(true);
-    //     }
-    // });
+    $.post("/product/info/"+pcode, JSON.parse(info), function(xhr){
+        console.log(xhr);
+        if(typeof cb == 'function'){
+            cb(true);
+        }
+    });
 }
 
 window.onhashchange = function () {
@@ -36,28 +34,3 @@ window.onhashchange = function () {
         $("#detail_layer,html").removeClass("detail_open");
     }
 };
-
-function render(tmpl_name, tmpl_data) {
-    if ( !render.tmpl_cache ) { 
-        render.tmpl_cache = {};
-    }
-
-    if ( ! render.tmpl_cache[tmpl_name] ) {
-        var tmpl_dir = '/templates';
-        var tmpl_url = tmpl_dir + '/' + tmpl_name + '.html';
-
-        var tmpl_string;
-        $.ajax({
-            url: tmpl_url,
-            method: 'GET',
-            async: false,
-            success: function(data) {
-                tmpl_string = data;
-            }
-        });
-
-        render.tmpl_cache[tmpl_name] = _.template(tmpl_string);
-    }
-
-    return render.tmpl_cache[tmpl_name](tmpl_data);
-}
