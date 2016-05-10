@@ -18,7 +18,7 @@ $(".detail_trigger").on("click", function () {
 });
 
 function loadingProductInfo(info, pcode, cb){
-    var productinfo = render('productinfo');
+    var productinfo = render('productinfo', {});
     console.log(productinfo);
     // $.getJSON("/product/info/"+pcode, function(xhr){
     //     console.log(JSON.parse(xhr));
