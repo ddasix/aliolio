@@ -11,17 +11,19 @@ $(".srch_icon").on("click", function () {
 $(".detail_trigger").on("click", function () {
     var pcode = $(this).attr('data-pcode');
     var info = $(this).attr('data-info');
-    loadingProductInfo(info, pcode, function(){
-        $("#detail_layer,html").addClass("detail_open");
+    loadingProductInfo(info, pcode, function(xhr){
+        
+        //$("#detail_layer,html").addClass("detail_open");
+        $("#detail_layer").addClass("detail_open").html(xhr);
+        $("html").addClass("detail_open")
         window.location.hash = "#open";
     });
 });
 
 function loadingProductInfo(info, pcode, cb){
     $.post("/product/info/"+pcode, {_token:$("meta[name='csrf-token']").attr('content'),data:JSON.parse(info)}, function(xhr){
-        console.log(xhr);
         if(typeof cb == 'function'){
-            cb(true);
+            cb(xhr);
         }
     });
 }
