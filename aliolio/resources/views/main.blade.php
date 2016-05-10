@@ -41,7 +41,9 @@ ALIOLIO - 해외구매 리뷰보고 구매하자!
 @stop
 
 @section('footer_js')
+	<script src="/js/template/productinfo.js" id="product-template" type="text/template"></script>
 	<script src="/js/jquery/jquery-2.2.3.js"></script>
+	<script src="/js/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 	<script src="/js/common_menu.js"></script>
 	<script src="/js/owl.carousel.min.js"></script>
