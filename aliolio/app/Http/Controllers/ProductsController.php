@@ -28,7 +28,7 @@ class ProductsController extends Controller
         foreach($pdts as $key => $val ){
             $response = $curl->get('http://kr.iherb.com/p/' . $val->PCODE);
             $meta_tags = $this->getMetaTags($response->body);
-            
+
             $product_info[$i]['title'] = $meta_tags['og:title'];
             $product_info[$i]['amount_price'] = $meta_tags['og:price:amount'];
             $product_info[$i]['standard_price'] = $meta_tags['og:standard_price'];
