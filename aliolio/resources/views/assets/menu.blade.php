@@ -10,10 +10,11 @@
         <div id="login_box">
                 <strong>회원가입 없이 SNS 계정으로 로그인 하세요!<br>더 많은 기능을 이용하실 수 있습니다.</strong>
                 <div class="social_login_menu">
-                    <a class="facebook login_menu">페이스북 계정으로 로그인</a>
-                    <a class="naver login_menu">네이버 계정으로 로그인</a>
-                    <a class="kakao login_menu">카카오 계정으로 로그인</a>
-                </div>
+					<a class="facebook login_menu">페이스북 계정으로 로그인</a>
+					<a class="naver login_menu">네이버 계정으로 로그인</a>
+					<a class="kakao login_menu">카카오 계정으로 로그인</a>
+					<a class="insta login_menu">인스타그램 계정으로 로그인</a>
+				</div>
         </div>
     <!--end 로그인 안했을때-->
     <!--start 로그인 했을때-->
