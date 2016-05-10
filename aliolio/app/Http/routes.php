@@ -16,7 +16,7 @@ Route::get('/',
         'uses' => 'ProductsController@index'
     ]
 );
-Route::get('/product/info/{pcode}',
+Route::post('/product/info/{pcode}',
     [
         'uses' => 'ProductsController@productInfo'
     ]
