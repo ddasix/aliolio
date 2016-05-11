@@ -719,7 +719,7 @@ img {
     background-color: #3591FE;
 }
 
-.produvt_thumb {
+.product_thumb {
     padding: 20%;
     box-sizing: border-box;
     background-color: white;
@@ -729,9 +729,8 @@ img {
     padding: 10px 25px;
     display: block;
     background-color: white;
-    border-top: 1px solid rgba(150, 150, 150, 0.2);
-    border-left: 1px solid rgba(150, 150, 150, 0.2);
-    border-right: 1px solid rgba(150, 150, 150, 0.2);
+    border: 1px solid rgba(150, 150, 150, 0.2);
+    border-bottom: none;
     word-break: keep-all;
     color: #9E9E9E;
 }
@@ -1555,126 +1554,6 @@ td img {
     border-radius: 5px;
 }
 
-@media screen and (max-width: 560px) {
-    .author_wrap {
-        border: none;
-        border-top: 1px solid rgba(150, 150, 150, 0.2);
-        border-bottom: 1px solid rgba(150, 150, 150, 0.2);
-    }
-    .list_thumb {
-        border-bottom: 1px solid rgba(150, 150, 150, 0.2);
-    }
-    .list_post {
-        border: none;
-        margin: 0;
-    }
-    .product_info {
-        margin: 0;
-        border: none;
-        border-bottom: 1px solid rgba(150, 150, 150, 0.2);
-        border-top: 1px solid rgba(150, 150, 150, 0.2);
-    }
-    .list_detail {
-        border: none;
-        border-top: 1px solid rgba(150, 150, 150, 0.2);
-    }
-    .promo_tit h2 {
-        font-size: 25px;
-    }
-    .promo_tit p {
-        font-size: 13px;
-        line-height: 20px;
-    }
-    .learn_more_btn {
-        font-size: 12px;
-        width: 120px;
-    }
-    .detail_btnwrap div {
-        border: none;
-    }
-    .detail_info {
-        margin-bottom: 10px;
-        background-color: white;
-        border-left: none;
-        border-right: none;
-    }
-    .detail_title {
-        border-left: none;
-        border-right: none;
-    }
-    .product_info {
-        border-left: none;
-        border-right: none;
-    }
-    .detail_pagewrap {
-        margin-top: 50px;
-        margin-bottom: 0;
-    }
-    .pagewrap {
-        margin-top: 0;
-    }
-}
-
-@media (min-width:560px) {
-    .product {
-        width: 50%;
-        padding: 5px 5px;
-    }
-    .promo {
-        height: 500px;
-    }
-}
-
-@media (min-width: 870px) {
-    .product {
-        width: 33.33%;
-        padding: 5px 5px;
-    }
-    .promo {
-        height: 500px;
-    }
-}
-
-@media (min-width: 1170px) {
-    .product {
-        width: 25%;
-        padding: 5px 5px;
-    }
-    .promo {
-        height: 600px;
-    }
-}
-
-@-webkit-keyframes alert {
-    0% {
-        opacity: .7;
-    }
-    20% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes alert {
-    0% {
-        opacity: .7;
-    }
-    20% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 .agree_check {
     text-align: left;
     position: relative;
@@ -1847,4 +1726,187 @@ td img {
     background-size: auto 100%;
     font-weight: bold;
     color: white;
+}
+
+.thumb_listwrap {
+    padding: 0 0 10px 0;
+    width: 100%;
+    max-width: 960px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.thumb_grid {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.thumb_product {
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+	padding: 5px;
+}
+
+.thumb_product_img {
+    border: 1px solid rgba(150,150,150,0.2);
+    padding: 10%;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    background-color: white;
+}
+
+.thumb_productinfo {
+    width: 100%;
+    height: 44px;
+    position: relative;
+    padding: 10px 10px;
+    border-left: 1px solid rgba(150,150,150,0.2);
+    border-right: 1px solid rgba(150,150,150,0.2);
+    border-bottom: 1px solid rgba(150,150,150,0.2);
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.thumb_producttitle {
+    padding: 10px;
+    border: 1px solid rgba(150,150,150,0.2);
+    border-top: none;
+    background-color: white;
+}
+
+.thumb_producttitle p{
+    color: gray;
+    word-break: keep-all;
+}
+
+@media screen and (max-width: 560px) {
+    .author_wrap {
+        border: none;
+        border-top: 1px solid rgba(150, 150, 150, 0.2);
+        border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    }
+    .list_thumb {
+        border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    }
+    .list_post {
+        border: none;
+        margin: 0;
+    }
+    .product_info {
+        margin: 0;
+        border: none;
+        border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+        border-top: 1px solid rgba(150, 150, 150, 0.2);
+    }
+    .list_detail {
+        border: none;
+        border-top: 1px solid rgba(150, 150, 150, 0.2);
+    }
+    .promo_tit h2 {
+        font-size: 25px;
+    }
+    .promo_tit p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .learn_more_btn {
+        font-size: 12px;
+        width: 120px;
+    }
+    .detail_btnwrap div {
+        border: none;
+    }
+    .detail_info {
+        margin-bottom: 10px;
+        background-color: white;
+        border-left: none;
+        border-right: none;
+    }
+    .detail_title {
+        border-left: none;
+        border-right: none;
+    }
+    .product_info {
+        border-left: none;
+        border-right: none;
+    }
+    .detail_pagewrap {
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+    .pagewrap {
+        margin-top: 0;
+    }
+}
+
+@media (min-width:560px) {
+    .product {
+        width: 50%;
+        padding: 5px 5px;
+    }
+    .promo {
+        height: 500px;
+    }
+    .thumb_product{
+        width: 33.33%;
+    }
+}
+
+@media (min-width: 870px) {
+    .product {
+        width: 33.33%;
+        padding: 5px 5px;
+    }
+    .promo {
+        height: 500px;
+    }
+    .thumb_product{
+        width: 25%;
+    }
+}
+
+@media (min-width: 1170px) {
+    .product {
+        width: 25%;
+        padding: 5px 5px;
+    }
+    .promo {
+        height: 600px;
+    }
+    .thumb_product{
+        width: 20%;
+    }
+}
+
+@-webkit-keyframes alert {
+    0% {
+        opacity: .7;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes alert {
+    0% {
+        opacity: .7;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
