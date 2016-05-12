@@ -51,6 +51,4 @@ ALIOLIO - 해외구매 리뷰보고 구매하자!
 	<script src="/js/menuup.js"></script>
 	<script src="/js/clip_rate.js"></script>
 	<script src="/js/grid.js"></script>
-	<script src="/js/detail_img_slide.js"></script>
-	<script src="/js/post_carousel.js"></script>
 @stop

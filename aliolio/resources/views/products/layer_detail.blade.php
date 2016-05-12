@@ -1,6 +1,6 @@
 <div class="detail_header">
     <div class="back_btn" onclick="history.back();"></div>
-    <h3>Natrol, 아사이베리, 디 얼티메이트 슈퍼 후르츠, 베지캡슐 75 정</h3>
+    <h3>{{ $data['productinfo']['title'] }}</h3>
     <div class="share_btn"></div>
     <div class="clip_fixed"></div>
 </div>
@@ -9,8 +9,9 @@
     <div class="detail_pagewrap">
         <div class="detail_thumb">
             <div id="detail_img_carosel" class="owl-carousel">
-                <div><img src="http://www.images-iherb.com/v/NTL-05576-4.jpg"></div>
-                <div><img src="http://www.images-iherb.com/v/NTL-05576-5.jpg"></div>
+                @foreach ($data['productinfo']['images'] as $image)
+                    <div><img src="{{ str_replace("/b/","/v/",$image) }}"></div>
+                @endforeach
             </div>
             <div class="detail_title">
                 <div class="product_cate">
@@ -18,17 +19,18 @@
                     <strong>></strong>
                     <a href="#" class="post_cate">보조식품</a>
                 </div>
-                <p name="product_name">Natrol, 아사이베리, 디 얼티메이트 슈퍼 후르츠, 베지캡슐 75 정</p>
-                <a class="detail_price" name="price">₩8,690</a>
+                <p name="product_name">{{ $data['productinfo']['title'] }}</p>
+                <a class="detail_price" name="price">₩{{ $data['productinfo']['amount_price'] }}</a>
                 <div>
-                    <a href="#" class="hashtag">#눈건강</a>
-                    <a href="#" class="hashtag">#아사이베리</a>
-                    <a href="#" class="hashtag">#베지캡슐</a>
-                    <a href="#" class="hashtag">#건강보조식품</a>
+                    @foreach ($data['productinfo']['description'] as $description)
+                        <a href="#" class="hashtag">#{{ $description }}</a>
+                    @endforeach
                 </div>
-                <a class="go_shop" href="#">구매하러가기</a>
+                <a class="go_shop" href="http://kr.iherb.com/item/{{ $data['productinfo']['product_id'] }}" target="_blank">구매하러가기</a>
             </div>
         </div>
+        <script src="/js/detail_img_slide.js"></script>
+        <script src="/js/post_carousel.js"></script>
         <div class="detail_product_info">
             <a id="d_clip_rate">
                 <p id="clip_rate_icon" class="clip_toggle">386</p>

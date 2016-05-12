@@ -84,7 +84,9 @@ class ProductsController extends Controller
     }
 
     public function productInfo($pcode){
-        return view('products.layer_detail');
+        $data['productinfo'] = $_POST["data"];
+        
+        return view('products.layer_detail', ['data'=>$data]);
     }
 
     /**
