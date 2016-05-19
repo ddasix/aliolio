@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="menu_imprtnt">
-                <a href="/post/post.html" class="post_btn">
+                <a href="/post/write" class="post_btn">
                     <p class="post">후기 작성하기</p>
                 </a>
                 <a href="#" class="clip_btn">
