@@ -24,26 +24,29 @@ class ProductsController extends Controller
         $pdts = Products::all();
         $curl = new cURL;
         $i = 0;
+        $product_info = [];
         
-        foreach($pdts as $key => $val ){
-            $response = $curl->get('http://kr.iherb.com/p/' . $val->PCODE);
-            $meta_tags = $this->getMetaTags($response->body);
+        if(count($pdts)>0){
+            foreach($pdts as $key => $val ){
+                $response = $curl->get('http://kr.iherb.com/p/' . $val->PCODE);
+                $meta_tags = $this->getMetaTags($response->body);
 
-            $product_info[$i]['title'] = $meta_tags['og:title'];
-            $product_info[$i]['amount_price'] = $meta_tags['og:price:amount'];
-            $product_info[$i]['standard_price'] = $meta_tags['og:standard_price'];
-            $product_info[$i]['brand'] = $meta_tags['og:brand'];
-            $product_info[$i]['product_id'] = $meta_tags['og:product_id'];
-            $product_info[$i]['availability'] = $meta_tags['og:availability'];
-            $product_info[$i]['rating'] = $meta_tags['og:rating'];
-            $product_info[$i]['rating_scale'] = $meta_tags['og:rating_scale'];
-            $product_info[$i]['rating_count'] = $meta_tags['og:rating_count'];
-            $product_info[$i]['images'] = $meta_tags['og:images'];
-            $product_info[$i]['keywords'] = !empty($meta_tags['keywords'])?$meta_tags['keywords']:null;
-            $product_info[$i]['description'] = explode(",",$meta_tags['description']);
-            $product_info[$i]['image'] = $meta_tags['og:image'];
-            
-            $i++;
+                $product_info[$i]['title'] = $meta_tags['og:title'];
+                $product_info[$i]['amount_price'] = $meta_tags['og:price:amount'];
+                $product_info[$i]['standard_price'] = $meta_tags['og:standard_price'];
+                $product_info[$i]['brand'] = $meta_tags['og:brand'];
+                $product_info[$i]['product_id'] = $meta_tags['og:product_id'];
+                $product_info[$i]['availability'] = $meta_tags['og:availability'];
+                $product_info[$i]['rating'] = $meta_tags['og:rating'];
+                $product_info[$i]['rating_scale'] = $meta_tags['og:rating_scale'];
+                $product_info[$i]['rating_count'] = $meta_tags['og:rating_count'];
+                $product_info[$i]['images'] = $meta_tags['og:images'];
+                $product_info[$i]['keywords'] = !empty($meta_tags['keywords'])?$meta_tags['keywords']:null;
+                $product_info[$i]['description'] = explode(",",$meta_tags['description']);
+                $product_info[$i]['image'] = $meta_tags['og:image'];
+                
+                $i++;
+            }
         }
         return view('main',['product_info'=>$product_info]);
     }
