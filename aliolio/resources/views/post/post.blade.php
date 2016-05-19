@@ -9,7 +9,7 @@
 @stop
 
 @section('header')
-	@include('assets.header_b')
+	@include('assets.header_sub')
 @stop
 
 @section('header_menu')
