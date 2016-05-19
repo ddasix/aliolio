@@ -18,7 +18,7 @@
             return $(document).on('keyup', '.tag_form input', function (e) {
                 var key;
                 key = e.keyCode || e.which;
-                if (key === 13 || key === 32 || key === 188) {
+                if (key === 13 || (key === 32 && $(this).val().replace(/^\s+|\s+$/gm,'').length > 0) || key === 188) {
                     app.add_tag($(this).val().replace(',', ''));
                     return $(this).val('');
                 } else if (key === 8) {

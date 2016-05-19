@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsTable extends Migration
+class CreateHashtagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,13 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_products', function (Blueprint $table) {
+        Schema::create('hashtags', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('PCODE',50);
-            $table->string('PNAME',255);
-            $table->timestamps();
-
-	        $table->unique(['PCODE','PNAME']);
+            $table->integer('rcode')->unsigned();
+            $table->string('HASHTAG', 50);
+            
+            $table->foreign('rcode')->references('idx')->on('reviews');
+            $table->index('HASHTAG');
         });
     }
 
@@ -29,6 +29,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tb_products');
+        Schema::drop('hashtags');
     }
 }
