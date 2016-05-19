@@ -26,6 +26,7 @@ class ReviewController extends Controller
     public function create()
     {
         //
+        return view('post.post');
     }
 
     /**

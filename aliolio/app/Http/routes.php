@@ -21,3 +21,9 @@ Route::post('/product/info/{pcode}',
         'uses' => 'ProductsController@productInfo'
     ]
 );
+
+Route::get('/post/write',
+    [
+        'uses' => 'ReviewController@create'
+    ]
+);
