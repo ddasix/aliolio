@@ -21,6 +21,11 @@ Route::post('/product/info/{pcode}',
         'uses' => 'ProductsController@productInfo'
     ]
 );
+Route::get('/product/info/{pcode}',
+    [
+        'uses' => 'ProductsController@productInfo'
+    ]
+);
 
 Route::get('/post/write',
     [

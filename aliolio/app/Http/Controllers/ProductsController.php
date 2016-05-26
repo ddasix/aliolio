@@ -11,7 +11,10 @@ use anlutro\cURL\cURL as cURL;
 
 class ProductsController extends Controller
 {
+    private $curl;
+    
     public function __construct(){
+        $this->curl = new cURL;
         
     }
     /**
@@ -22,13 +25,12 @@ class ProductsController extends Controller
     public function index()
     {
         $pdts = Products::all();
-        $curl = new cURL;
         $i = 0;
         $product_info = [];
         
         if(count($pdts)>0){
             foreach($pdts as $key => $val ){
-                $response = $curl->get('http://kr.iherb.com/p/' . $val->PCODE);
+                $response = $this->curl->get('http://kr.iherb.com/p/' . $val->PCODE);
                 $meta_tags = $this->getMetaTags($response->body);
 
                 $product_info[$i]['title'] = $meta_tags['og:title'];
@@ -87,10 +89,32 @@ class ProductsController extends Controller
     }
 
     public function productInfo($pcode){
-        $data['productinfo'] = $_POST["data"];
+        $response = $this->curl->get('http://kr.iherb.com/p/' . $pcode);
+        $meta_tags = $this->getMetaTags($response->body);
+
+        $product_info['title'] = $meta_tags['og:title'];
+        $product_info['amount_price'] = $meta_tags['og:price:amount'];
+        $product_info['standard_price'] = $meta_tags['og:standard_price'];
+        $product_info['brand'] = $meta_tags['og:brand'];
+        $product_info['product_id'] = $meta_tags['og:product_id'];
+        $product_info['availability'] = $meta_tags['og:availability'];
+        $product_info['rating'] = $meta_tags['og:rating'];
+        $product_info['rating_scale'] = $meta_tags['og:rating_scale'];
+        $product_info['rating_count'] = $meta_tags['og:rating_count'];
+        $product_info['images'] = $meta_tags['og:images'];
+        $product_info['keywords'] = !empty($meta_tags['keywords'])?$meta_tags['keywords']:null;
+        $product_info['description'] = explode(",",$meta_tags['description']);
+        $product_info['image'] = $meta_tags['og:image'];
         
-        return view('products.layer_detail', ['data'=>$data]);
+        echo json_encode($product_info);
+        
+        //return view('products.layer_detail', ['data'=>$data]);
     }
+    // public function productInfo($pcode){
+    //     $data['productinfo'] = $_POST["data"];
+        
+    //     return view('products.layer_detail', ['data'=>$data]);
+    // }
 
     /**
      * Show the form for creating a new resource.

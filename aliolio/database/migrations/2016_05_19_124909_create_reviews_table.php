@@ -19,6 +19,7 @@ class CreateReviewsTable extends Migration
             $table->string('PCODE', 20);
             $table->float('SPOINT');
             $table->text('REVIEW');
+            $table->string('RCODE', 6);
             $table->timestamps();
             
             $table->foreign(['social','id'])->references(['social','id'])->on('users');
