@@ -77,6 +77,7 @@
                     <div class="tag_form">
                         <input id="tag_input" placeholder='* 해시태그를 입력해 주세요.(엔터)' />
                     </div>
+                    <input name="url" type="text" id="rcode_input" placeholder="추천 코드를 입력해 주세요." />
                     <div class="product_page_info">
                         <div class="page_thumb">
                             <img src="http://www.images-iherb.com/v/HNP-68003-15.jpg">

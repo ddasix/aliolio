@@ -1719,8 +1719,9 @@ td img {
     clear: both;
     display: table;
 }
+
 .insta {
-    background-color: rgb(46,94,134);
+    background-color: rgb(46, 94, 134);
     background-image: url(/image/insta_icon.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -1745,11 +1746,11 @@ td img {
     width: 50%;
     box-sizing: border-box;
     float: left;
-	padding: 5px;
+    padding: 5px;
 }
 
 .thumb_product_img {
-    border: 1px solid rgba(150,150,150,0.2);
+    border: 1px solid rgba(150, 150, 150, 0.2);
     padding: 10%;
     display: inline-block;
     box-sizing: border-box;
@@ -1763,23 +1764,38 @@ td img {
     height: 44px;
     position: relative;
     padding: 10px 10px;
-    border-left: 1px solid rgba(150,150,150,0.2);
-    border-right: 1px solid rgba(150,150,150,0.2);
-    border-bottom: 1px solid rgba(150,150,150,0.2);
+    border-left: 1px solid rgba(150, 150, 150, 0.2);
+    border-right: 1px solid rgba(150, 150, 150, 0.2);
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
     box-sizing: border-box;
     background-color: white;
 }
 
 .thumb_producttitle {
     padding: 10px;
-    border: 1px solid rgba(150,150,150,0.2);
+    border: 1px solid rgba(150, 150, 150, 0.2);
     border-top: none;
     background-color: white;
 }
 
-.thumb_producttitle p{
+.thumb_producttitle p {
     color: gray;
     word-break: keep-all;
+}
+
+#rcode_input {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    color: #9c9c9c;
+    outline: none;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    border-radius: none;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
 }
 
 @media screen and (max-width: 560px) {
@@ -1850,7 +1866,7 @@ td img {
     .promo {
         height: 500px;
     }
-    .thumb_product{
+    .thumb_product {
         width: 33.33%;
     }
 }
@@ -1863,7 +1879,7 @@ td img {
     .promo {
         height: 500px;
     }
-    .thumb_product{
+    .thumb_product {
         width: 25%;
     }
 }
@@ -1876,7 +1892,7 @@ td img {
     .promo {
         height: 600px;
     }
-    .thumb_product{
+    .thumb_product {
         width: 20%;
     }
 }
