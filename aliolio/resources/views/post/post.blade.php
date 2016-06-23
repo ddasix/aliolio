@@ -20,7 +20,9 @@
 <div class="pagewrap">
 
     <!-- multistep form -->
-    <form id="post_form">
+    <form id="post_form" method="POST" action="/product">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="product_id"/>
         <!-- fieldsets -->
         <fieldset>
             <div class="post_wrap">
@@ -42,11 +44,11 @@
                 </p>
                 <div class="product_page_info">
                     <div class="page_thumb">
-                        <img src="http://www.images-iherb.com/v/HNP-68003-15.jpg">
+                        <img class="data_thumb_img" src=""/>
                     </div>
                     <div class="page_name">
-                        <p>Hero Nutritional Products, 요미 베어, 종합 멀티 비타민, 100% 천연 과일 맛 & 색소, 200 구미 베어</p>
-                        <strong>₩ 23,957</strong>
+                        <p class="data_title">Hero Nutritional Products, 요미 베어, 종합 멀티 비타민, 100% 천연 과일 맛 & 색소, 200 구미 베어</p>
+                        <strong class="data_amount_price">₩ 0</strong>
                     </div>
                 </div>
             </div>
@@ -62,35 +64,30 @@
                 </p>
                 <div class="write_info">
                     <select name="qlty" id="review_input">
-                        <option>* 별점을 매겨주세요.</option>
-                        <option>5점(매우만족)</option>
-                        <option>4.5점</option>
-                        <option>4점(만족)</option>
-                        <option>3.5점</option>
-                        <option>3점(보통)</option>
-                        <option>2.5점</option>
-                        <option>2점(불만족)</option>
-                        <option>1.5점</option>
-                        <option>1점(매우불만족)</option>
+                        <option value="5">5점(매우만족)</option>
+                        <option value="4">4점(만족)</option>
+                        <option value="3">3점(보통)</option>
+                        <option value="2">2점(불만족)</option>
+                        <option value="1">1점(매우불만족)</option>
                     </select>
                     <textarea name="cntn" id="post_input" maxlength="500" placeholder="* 리뷰를 입력하세요." onkeyup="resize(this)"></textarea>
                     <div class="tag_form">
                         <input id="tag_input" placeholder='* 해시태그를 입력해 주세요.(엔터)' />
                     </div>
-                    <input name="url" type="text" id="rcode_input" placeholder="추천 코드를 입력해 주세요." />
+                    <input name="recomm_code" type="text" id="rcode_input" placeholder="추천 코드를 입력해 주세요." />
                     <div class="product_page_info">
                         <div class="page_thumb">
-                            <img src="http://www.images-iherb.com/v/HNP-68003-15.jpg">
+                            <img class="data_thumb_img" src=""/>
                         </div>
                         <div class="page_name">
-                            <p>Hero Nutritional Products, 요미 베어, 종합 멀티 비타민, 100% 천연 과일 맛 & 색소, 200 구미 베어</p>
-                            <strong>₩ 23,957</strong>
+                            <p class="data_title">Hero Nutritional Products, 요미 베어, 종합 멀티 비타민, 100% 천연 과일 맛 & 색소, 200 구미 베어</p>
+                            <strong class="data_amount_price">₩ 0</strong>
                         </div>
                     </div>
                 </div>
             </div>
-            <input type="button" onclick="history.go(0);" class="previous action-button" value="상품 다시 선택" />
-            <input type="submit" name="submit" class="submit action-button" value="완료" />
+            <input type="button" onclick="location.reload()" class="action-button" value="상품 다시 선택" />
+            <input type="button" class="submit action-button" value="완료" onclick="submitForm()" />
         </fieldset>
     </form>
 </div>

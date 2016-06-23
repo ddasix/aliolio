@@ -38,6 +38,9 @@
             if (this.can_delete && id === this.can_delete_id) {
                 $('.tag_form .tag.highlight').remove();
                 this.can_delete = false;
+                
+                $("input[name='hashtag[]']").eq(Number(id)-1).remove();
+                
                 return this.can_delete_id = 0;
             } else {
                 $('.tag_form .tag').removeClass('highlight');
@@ -53,6 +56,12 @@
         },
         add_tag: function (name) {
             if (name !== '') {
+                $("#post_form").append(
+                    $("<input>",{
+                        "name":"hashtag[]",
+                        "type":"hidden"
+                    }).val(name)
+                );
                 return $('.tag_form input').before('<div class=\'tag\'>'+ name + '</div>');
             }
         }

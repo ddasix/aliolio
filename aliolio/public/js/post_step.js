@@ -17,8 +17,14 @@ PostStep.prototype.checkProduct = function(pcode, callback){
 		url: '/product/info/' + pcode		
 	});
 	request.done(function( msg ) {
-		console.log(msg);
 		if(msg.result == 'success'){
+			var datas = msg.data;
+			
+			$(".data_thumb_img").attr('src',datas.image);
+			$(".data_amount_price").text('₩ '+datas.amount_price);
+			$(".data_title").text(datas.title);
+			$("input[name='product_id']").val(datas.product_id);
+
 			if(typeof callback == 'function'){
 				callback(msg.data);
 			}
@@ -31,7 +37,7 @@ PostStep.prototype.checkProduct = function(pcode, callback){
 }
 
 PostStep.prototype.next = function(current_fs, next_fs){
-		
+
 	//activate next step on progressbar using the index of next_fs
 	$("#step_status li").eq($("fieldset").index(next_fs)).addClass("active");
 	
@@ -72,7 +78,6 @@ $(".next").on("click",function(){
 	if($(this).attr('data-next') == 'checkurl'){
 		var url_ = $("input[name=url]").val().split("/")
 		postStep.checkProduct(url_[url_.length - 1], function(data){
-			console.log(data);
 			animating = true;
 			postStep.next(current_fs,next_fs);
 		});
@@ -116,6 +121,6 @@ $(".previous").click(function(){
 	});
 });
 
-$(".submit").click(function(){
-	return false;
-})
+function submitForm(){
+	$("#post_form").submit();
+}

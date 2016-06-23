@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Products;
+use App\Review;
+use App\Hashtag;
+
 use anlutro\cURL\cURL as cURL;
 
 class ProductsController extends Controller
@@ -108,13 +111,33 @@ class ProductsController extends Controller
             $product_info['description'] = explode(",",$meta_tags['description']);
             $product_info['image'] = $meta_tags['og:image'];
             
-            echo json_encode(['resullt'=>'success','data'=>$product_info]); 
+            echo json_encode(['result'=>'success','data'=>$product_info]); 
         }catch(Exception $e){
-            echo json_encode(['resullt'=>'failed']);
+            echo json_encode(['result'=>'failed']);
         }
         
         //return view('products.layer_detail', ['data'=>$data]);
     }
+    public function productStore(Request $request)
+    {
+        $review = new Review;
+            
+        $review->social     = "o8v7d9yofdugyfd7ygodfs7g";
+        $review->id         = "0012";
+        $review->PCODE = $request->input("product_id");
+        $review->SPOINT = $request->input("qlty");
+        $review->REVIEW = $request->input("cntn");
+        $review->RCODE = $request->input("recomm_code");
+
+        $review->save();
+        
+        $hashtags = $request->input("hashtag");
+
+        for ($i=0; $i < count($hashtags); $i++) {
+            Hashtag::create(['rcode'=>$review->id,'HASHTAG'=>$hashtags[$i]]); 
+        }
+    }
+    
     // public function productInfo($pcode){
     //     $data['productinfo'] = $_POST["data"];
         

@@ -1798,6 +1798,8 @@ td img {
     -webkit-appearance: none;
 }
 
+.data_hashtag{ overflow: hidden; width: 0;height:0 }
+
 @media screen and (max-width: 560px) {
     .author_wrap {
         border: none;
