@@ -53,7 +53,6 @@
             <input type="button" class="next action-button" data-next="" value="네! 맞습니다." />
             <input type="button" name="previous" class="previous action-button" value="아니요." />
         </fieldset>
-        
         <fieldset>
             <div class="post_wrap">
                 <p class="ask_product">리뷰를 작성해 주세요.
