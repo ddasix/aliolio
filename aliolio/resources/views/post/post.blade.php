@@ -19,41 +19,41 @@
 @section('content')
 <div class="pagewrap">
 
-    <!-- fieldsets -->
-    <fieldset>
-        <div class="post_wrap">
-            <p class="ask_product">상품 주소를 입력해 주세요.
-                <div href="#" class="go_guide">
-                    <p>리뷰를 작성할 아이허브 상품페이지 주소를 복사하여 아래 입력창에 입력한 후 등록하기를 눌러줍니다.</p>
-                </div>
-            </p>
-            <input name="url" type="text" id="code_input" placeholder="* 여기에 상품 페이지 주소를 입력하세요." />
-        </div>
-        <input type="button" class="next action-button" data-next="checkurl" value="등록하기" />
-    </fieldset>
-    <fieldset>
-        <div class="post_wrap">
-            <p class="ask_product">이 상품이 맞나요?
-                <div href="#" class="go_guide">
-                    <p>리뷰할 상품이 맞는지 확인해주세요. 아니라면 [아니요]를 눌러 주소를 다시 입력해 주세요.</p>
-                </div>
-            </p>
-            <div class="product_page_info">
-                <div class="page_thumb">
-                    <img src="http://www.images-iherb.com/v/HNP-68003-15.jpg">
-                </div>
-                <div class="page_name">
-                    <p>Hero Nutritional Products, 요미 베어, 종합 멀티 비타민, 100% 천연 과일 맛 & 색소, 200 구미 베어</p>
-                    <strong>₩ 23,957</strong>
-                </div>
-            </div>
-        </div>
-        <input type="button" class="next action-button" data-next="" value="네! 맞습니다." />
-        <input type="button" name="previous" class="previous action-button" value="아니요." />
-    </fieldset>
-        
     <!-- multistep form -->
     <form id="post_form">
+        <!-- fieldsets -->
+        <fieldset>
+            <div class="post_wrap">
+                <p class="ask_product">상품 주소를 입력해 주세요.
+                    <div href="#" class="go_guide">
+                        <p>리뷰를 작성할 아이허브 상품페이지 주소를 복사하여 아래 입력창에 입력한 후 등록하기를 눌러줍니다.</p>
+                    </div>
+                </p>
+                <input name="url" type="text" id="code_input" placeholder="* 여기에 상품 페이지 주소를 입력하세요." />
+            </div>
+            <input type="button" class="next action-button" data-next="checkurl" value="등록하기" />
+        </fieldset>
+        <fieldset>
+            <div class="post_wrap">
+                <p class="ask_product">이 상품이 맞나요?
+                    <div href="#" class="go_guide">
+                        <p>리뷰할 상품이 맞는지 확인해주세요. 아니라면 [아니요]를 눌러 주소를 다시 입력해 주세요.</p>
+                    </div>
+                </p>
+                <div class="product_page_info">
+                    <div class="page_thumb">
+                        <img src="http://www.images-iherb.com/v/HNP-68003-15.jpg">
+                    </div>
+                    <div class="page_name">
+                        <p>Hero Nutritional Products, 요미 베어, 종합 멀티 비타민, 100% 천연 과일 맛 & 색소, 200 구미 베어</p>
+                        <strong>₩ 23,957</strong>
+                    </div>
+                </div>
+            </div>
+            <input type="button" class="next action-button" data-next="" value="네! 맞습니다." />
+            <input type="button" name="previous" class="previous action-button" value="아니요." />
+        </fieldset>
+        
         <fieldset>
             <div class="post_wrap">
                 <p class="ask_product">리뷰를 작성해 주세요.
