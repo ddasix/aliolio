@@ -17,6 +17,14 @@
 @stop
 
 @section('content')
+<div class="post_alert" style="display:none;">
+	<p>상품 페이지 주소를 정확하게 입력해 주세요.</p>
+</div>
+<div class="loading_cover">
+	<div class="loding_icon_wrap">
+		<div class="loading_mark"><i></i><i></i></div>
+	</div>
+</div>
 <div class="pagewrap">
 
     <!-- multistep form -->
@@ -97,6 +105,7 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js"></script>
         <script src="/js/post_step.js"></script>
+        <script src="/js/post_alert.js"></script>
         <script src="/js/tag_field.js"></script>
         <script>
             $(".go_guide").click(function () {

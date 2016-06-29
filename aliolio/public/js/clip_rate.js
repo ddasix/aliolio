@@ -32,7 +32,7 @@ $(function () {
 			$('.clip_alert').attr('style','display:normal;');
 				setTimeout(function(){
 					$(".clip_alert").attr('style','display:none;');
-				}, 2400);
+				}, 2000);
             $('.clip_toggle').html(function (i, val) {
                 return val * 1 + 1
             });
