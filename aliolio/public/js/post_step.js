@@ -5,12 +5,11 @@ var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
 function PostStep(){
-	
 }
 PostStep.prototype = {};
 
 PostStep.prototype.checkProduct = function(pcode, callback){
-
+	var _that = this;
 	var request = $.ajax({
 		method: "GET",
 		dataType:'json',
@@ -28,19 +27,23 @@ PostStep.prototype.checkProduct = function(pcode, callback){
 			if(typeof callback == 'function'){
 				callback(msg.data);
 			}
+		}else if(msg.result == 'failed'){
+
+		//	postAlert.alert("상품코드 오류: ");	
 		}
 	});
 
 	request.fail(function( jqXHR, textStatus ) {
-		alert( "상품코드 오류: " + textStatus );
+		_that.hiddenCover();
+		postAlert.alert("상품코드 오류: " + textStatus);
 	});
 }
 
 PostStep.prototype.next = function(current_fs, next_fs){
-
+	var _that = this;
 	//activate next step on progressbar using the index of next_fs
 	$("#step_status li").eq($("fieldset").index(next_fs)).addClass("active");
-	
+	_that.hiddenCover();
 	//show the next fieldset
 	next_fs.show(); 
 	//hide the current fieldset with style
@@ -68,10 +71,27 @@ PostStep.prototype.next = function(current_fs, next_fs){
 		easing: 'easeInOutBack'
 	});
 };
+PostStep.prototype.showCover = function(callback){
+	$(".loading_cover").show(50, function(){
+		if(typeof callback == 'function'){
+			callback();
+		}
+	});
+};
+PostStep.prototype.hiddenCover = function(callback){
+	$(".loading_cover").hide(50, function(){
+		if(typeof callback == 'function'){
+			callback();
+		}
+	});
+};
+
+var postStep = new PostStep();
+
 $(".next").on("click",function(){
 	if(animating) return false;
+	postStep.showCover()
 	
-	var postStep = new PostStep();
 	current_fs = $(this).parent();
 	next_fs = $(this).parent().next();
 	
@@ -89,6 +109,7 @@ $(".next").on("click",function(){
 $(".previous").click(function(){
 	if(animating) return false;
 	animating = true;
+	postStep.showCover()
 	
 	current_fs = $(this).parent();
 	previous_fs = $(this).parent().prev();
@@ -119,6 +140,7 @@ $(".previous").click(function(){
 		//this comes from the custom easing plugin
 		easing: 'easeInOutBack'
 	});
+	PostStep.hiddenCover();
 });
 
 function submitForm(){

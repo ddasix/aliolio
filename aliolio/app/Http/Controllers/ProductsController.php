@@ -95,6 +95,9 @@ class ProductsController extends Controller
         
         try{
             $response = $this->curl->get('http://kr.iherb.com/p/' . $pcode);
+            if($response->statusCode != '200') abort(404, 'Unauthorized action.');
+            
+            
             $meta_tags = $this->getMetaTags($response->body);
 
             $product_info['title'] = $meta_tags['og:title'];
@@ -112,7 +115,7 @@ class ProductsController extends Controller
             $product_info['image'] = $meta_tags['og:image'];
             
             echo json_encode(['result'=>'success','data'=>$product_info]); 
-        }catch(Exception $e){
+        }catch(\NotFoundHttpException $e){
             echo json_encode(['result'=>'failed']);
         }
         
