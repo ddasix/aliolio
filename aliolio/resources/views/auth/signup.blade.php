@@ -19,7 +19,6 @@
 @section('content')
 <div class="pagewrap">
 	<div class="post_wrap">
-		<img src="/image/logo_login.png" />
 		<div id="login">
 			<strong>회원가입이 완료 되었습니다.<br>지금부터 알리올리오의 다양한 서비스를 이용해 보세요!</strong>
 		</div>

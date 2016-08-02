@@ -14,7 +14,7 @@ $(".detail_trigger").on("click", function () {
     loadingProductInfo(info, pcode, function(xhr){
         
         //$("#detail_layer,html").addClass("detail_open");
-        $("#detail_layer").addClass("detail_open").html(xhr);
+        //$("#detail_layer").addClass("detail_open").html(xhr);
         $("html").addClass("detail_open")
         window.location.hash = "#open";
     });

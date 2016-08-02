@@ -1,4 +1,3 @@
-@extends('layouts.master')
 
 @section('title')
 약관동의

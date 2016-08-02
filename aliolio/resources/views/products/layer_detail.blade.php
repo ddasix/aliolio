@@ -115,7 +115,7 @@
                             <p>이쁘당 사고 싶당! 이거 정말 괜찮은가요? </p>
                         </div>
                     </li>
-                    <!-------------------------------->
+                    {{--  --}}
                     <li class="cmnt_content_wrap">
                         <div class="cmnt_profile">
                             <img src="../image/profile_img.png" />
@@ -171,7 +171,7 @@
                             <p>이쁘당 사고 싶당! 이거 정말 괜찮은가요? </p>
                         </div>
                     </li>
-                    <!-------------------------------->
+                    {{--  --}}
                 </ul>
                 <a href="#" class="cmnt_more">댓글 더보기</a>
             </div>
