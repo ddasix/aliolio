@@ -90,7 +90,7 @@ img {
     position: absolute;
     top: 0px;
     right: 0px;
-    background-image: url(../image/search_icon_gray.png);
+    background-image: url(/image/search_icon_gray.png);
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
@@ -176,7 +176,7 @@ img {
     width: 50px;
     height: 50px;
     float: right;
-    background-image: url(../image/close_gray.png);
+    background-image: url(/image/close_gray.png);
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
@@ -215,7 +215,7 @@ img {
     padding-left: 30px;
     height: 24px;
     display: inline-block;
-    background-image: url(../image/clip_icon_gray.png);
+    background-image: url(/image/clip_icon_gray.png);
     background-size: 24px 24px;
     background-repeat: no-repeat;
     text-align: right;
@@ -226,7 +226,7 @@ img {
 }
 
 #clip_rate.select {
-    background-image: url(../image/clip_icon_blue.png);
+    background-image: url(/image/clip_icon_blue.png);
     color: #67b1d7
 }
 
@@ -235,7 +235,7 @@ img {
     margin-left: 10px;
     height: 24px;
     display: inline-block;
-    background-image: url(../image/cmnt_icon.png);
+    background-image: url(/image/cmnt_icon.png);
     background-size: 24px 24px;
     background-repeat: no-repeat;
     text-align: right;

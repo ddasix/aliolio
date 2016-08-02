@@ -4,12 +4,11 @@
 로그인 완료!
 @stop
 
-@section('header_js')
-	<link href="../css/base.css" rel="stylesheet" type="text/css" />
+@section('header_css')
 @stop
 
 @section('header')
-	@include('assets.header_b')
+	@include('assets.header_sub')
 @stop
 
 @section('header_menu')

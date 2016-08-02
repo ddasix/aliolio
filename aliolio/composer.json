@@ -16,7 +16,8 @@
         "socialiteproviders/kakao": "^1.0",
         "barryvdh/laravel-debugbar": "^2.1",
         "anlutro/curl": "^1.4",
-        "euskadi31/opengraph": "^1.0"
+        "euskadi31/opengraph": "^1.0",
+        "laravelcollective/html": "^5.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

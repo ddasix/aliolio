@@ -5,7 +5,7 @@
 @stop
 
 @section('header_js')
-	<link href="../css/base.css" rel="stylesheet" type="text/css" />
+	<link href="/css/base.css" rel="stylesheet" type="text/css" />
 @stop
 
 @section('header')

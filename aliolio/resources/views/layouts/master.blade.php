@@ -9,6 +9,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<title>@yield('title')</title>
 	<link rel="icon" sizes="192x192" href="/icon.png" />
+	<link href="/css/base.css" rel="stylesheet" type="text/css" />
 	@yield('header_js')
 </head>
 
@@ -27,9 +28,9 @@
 	<div id="container">
 		@yield('content')
 	</div>
-	<!--제이쿼리----->
+	{{-- 자바스크립트 --}}
+	<script src="/js/jquery/jquery-2.2.3.min.js"></script>
 	@yield('footer_js')
-	<!--제이쿼리----->
+	{{-- 자바스크립트 --}}
 </body>
-
 </html>
